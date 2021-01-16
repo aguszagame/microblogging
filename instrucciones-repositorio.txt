@@ -1,0 +1,69 @@
+
+GITHUB
+
+…or create a new repository on the command line
+
+echo "# microblogging" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/aguszagame/microblogging.git
+git push -u origin main
+                
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/aguszagame/microblogging.git
+git branch -M main
+git push -u origin main
+
+…or import code from another repository
+
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+HEROKU
+
+
+Install the Heroku CLI
+
+Download and install the Heroku CLI.
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+$ heroku login
+
+Create a new Git repository
+
+Initialize a git repository in a new or existing directory
+
+$ cd my-project/
+$ git init
+$ heroku git:remote -a microbloggingnewapp
+
+Deploy your application
+
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+You can now change your main deploy branch from "master" to "main" for both manual and automatic deploys, please follow the instructions here.
+Existing Git repository
+
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a microbloggingnewapp
+
+
+MONGODB
+
+mongodb+srv://aguszagame:<password>@cluster0.iz3nc.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+Replace <password> with the password for the aguszagame user. Replace <dbname> with the name of the database that connections will use by default. Ensure any option params are URL encoded.
+
+MONGODB COMPAS
+
+mongodb+srv://aguszagame:<password>@cluster0.iz3nc.mongodb.net/test
