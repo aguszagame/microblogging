@@ -9,7 +9,7 @@ import (
 )
 
 /*InsertoRegistro es la parada final con BD para insertar los datos del usuario*/
-func InsertoRegistro (u models.Usuario)(string,bool,error){
+func InsertoRegistro (u models.Usuario)(string, bool, error){
 	ctx, cancel := context.WithTimeout(context.Background(),15*time.Second)
 	defer cancel()
 

@@ -9,6 +9,7 @@ import (
  
 /*MongoCN es el objeto de conexión a la base de datos*/
 var MongoCN = ConectarBD()
+
 var clientOptions = options.Client().ApplyURI("mongodb+srv://aguszagame:agus1234@cluster0.iz3nc.mongodb.net/microblogging?retryWrites=true&w=majority")
  
 /*ConectarBD es la función que me permite conectar a la base de datos*/

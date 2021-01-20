@@ -8,13 +8,11 @@ import (
 )
 
 //Registro es la funcion para crear en la BD el registro de usuario
-
-
 func Registro (w http.ResponseWriter, r *http.Request){
 	var usu models.Usuario
 	//Codifica los json que vienen del fronted a formato bson que es el que usa mongoDB
-	if err := json.NewDecoder(r.Body).Decode (&usu)
-	err != nil {
+	 err := json.NewDecoder(r.Body).Decode (&usu)
+	if err != nil {
 		//Verifica los datos json si pudieron pasarse a bson
 		http.Error(w,"Error en los datos recibidos: " + err.Error(),400)
 		return
