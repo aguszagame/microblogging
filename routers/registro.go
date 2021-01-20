@@ -3,6 +3,7 @@ package routers
 import (
 	"encoding/json"
 	"net/http"
+
 	"github.com/aguszagame/microblogging/bd"
 	"github.com/aguszagame/microblogging/models"
 )
@@ -11,7 +12,7 @@ import (
 func Registro (w http.ResponseWriter, r *http.Request){
 	var usu models.Usuario
 	//Codifica los json que vienen del fronted a formato bson que es el que usa mongoDB
-	 err := json.NewDecoder(r.Body).Decode (&usu)
+	 err := json.NewDecoder(r.Body).Decode(&usu)
 	if err != nil {
 		//Verifica los datos json si pudieron pasarse a bson
 		http.Error(w,"Error en los datos recibidos: " + err.Error(),400)
