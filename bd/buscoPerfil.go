@@ -16,7 +16,7 @@ func BuscoPerfil(ID string) (models.Usuario, error) {
     // vamos a usar una petición GET, ya que va a venir como parámetro en la URL
     ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
     defer cancel()
-    db := MongoCN.Database("microblog")
+    db := MongoCN.Database("microblogging")
     col := db.Collection("usuarios")
  
     var perfil models.Usuario
